@@ -1,0 +1,738 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap%27");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden !important;
+  background-color: f3eeeb;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  background-position: center;
+  min-height: 100% !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#vai-tremer {
+  animation: tremer 0.5s infinite;
+}
+
+/* keyframe para ajustar até onde treme */
+@keyframes tremer {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 4px;
+  }
+
+  50% {
+    margin-left: 0;
+  }
+
+  75% {
+    margin-left: -4px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes parar {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 0;
+  }
+
+  75% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+/********** common setting **********/
+#contactId h2 {
+  font-size: 2.8rem !important;
+  font-weight: 700;
+}
+
+#contactId img {
+  display: block;
+  max-width: 100%;
+}
+
+#contactId a,
+#contactId button {
+  cursor: pointer;
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
+}
+
+.atlas-cta {
+  border-radius: 22px !important;
+  padding: 12px 30px !important;
+  font-weight: 700;
+  transition: 0.3s ease-in-out !important;
+}
+
+.atlas-cta:hover {
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+.atlas-cta-wide {
+  width: 100%;
+}
+
+.cta-green {
+  background: #00ffad;
+  color: #ffffff;
+}
+
+.cta-green:hover {
+  color: #ffffff;
+  background: #00e69c;
+}
+
+.cta-blue {
+  background: #192440;
+  color: #ffffff;
+}
+
+.cta-blue:hover {
+  color: #ffffff;
+  background: #121a2e;
+}
+
+.cta-ghost {
+  border: 2px solid #192440 !important;
+  color: #192440;
+}
+
+.cta-ghost:hover {
+  color: #ffffff;
+  background: #121a2e;
+}
+
+#banner {
+  background-size: cover;
+}
+
+/********** contact **********/
+#contact {
+  background-size: cover;
+  background: #185b8f;
+}
+
+#contact ul li {
+  padding: 3px 0;
+}
+
+#contact .form {
+  color: #00ffad;
+}
+
+#contact .form input,
+#contact .form textarea {
+  background: transparent;
+  border: 1px solid #00ffad;
+  color: #ffffff;
+}
+
+#name::placeholder {
+  color: rgba(255, 255, 255, 0.795);
+}
+
+#lastName::placeholder {
+  color: rgba(255, 255, 255, 0.795);
+}
+
+#phone::placeholder {
+  color: rgba(255, 255, 255, 0.795);
+}
+
+#email::placeholder {
+  color: rgba(255, 255, 255, 0.795);
+}
+
+#city::placeholder {
+  color: rgba(255, 255, 255, 0.795);
+}
+
+/********** gallery **********/
+
+#conteiner-gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 50px));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 50px));
+  gap: 5px;
+  padding: 20px 0;
+}
+
+#conteiner-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+#conteiner-gallery .grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#conteiner-gallery .grid img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+/********** RWD **********/
+@media (max-width: 575px) {
+  #banner h1 {
+    font-size: 3.6rem;
+  }
+
+  .bodyContainer {
+    margin: 15px !important;
+  }
+
+  #menuAside {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+}
+
+#title1 {
+  color: #5f9bce;
+  font-family: "Comfortaa";
+  font-size: 299%;
+}
+
+.whatsapp-link {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8bc246+0,61d334+100 */
+  background: #8bc246;
+  /* Old browsers */
+  background: -moz-linear-gradient(top,
+      #8bc246 0%,
+      #61d334 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,
+      #8bc246 0%,
+      #61d334 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,
+      #8bc246 0%,
+      #61d334 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8bc246', endColorstr='#61d334', GradientType=0);
+  /* IE6-9 */
+
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000;
+}
+
+.whatsapp-link:hover {
+  background: #75a539;
+}
+
+.fa-whatsapp {
+  margin-top: 16px;
+}
+
+.nav1 {
+  text-align: center;
+  display: block;
+  color: blue;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.sleepetImage {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .sleepetImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+/* LUCAS -----------------------------------------------------------------*/
+
+.hero {
+  height: 1000px;
+  width: 100%;
+  background-image: linear-gradient(rgb(0, 52, 80), rgba(255, 255, 255, 0)),
+    url(../imagens/capa.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#cbx {
+  display: none;
+}
+
+#menuAside {
+  display: none;
+}
+
+#menuAside ul {
+  display: none;
+}
+
+.tps {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  /*   padding-top: 20px !important;
+  padding-left: 10px !important;
+  padding-right: 8px !important; */
+}
+
+.logo {
+  font-size: 28px;
+}
+
+nav ul li {
+  list-style-type: none !important;
+  display: inline-block !important;
+  padding: 10px 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #00e69c;
+  transition: 0.3s;
+}
+
+.insta {
+  border: none;
+  background: #8bc246;
+  padding: 12px 30px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.insta:hover {
+  background: #75a539;
+}
+
+.zap {
+  border: none;
+  background: #8bc246;
+  padding: 12px 30px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.zap:hover {
+  background: #75a539;
+}
+
+#menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .lists {
+    display: none !important;
+  }
+
+  #menu {
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+
+  #menu span {
+    height: 5px;
+    width: 50px;
+    background: white;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  #menuAside {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    height: 80%;
+    width: 300px;
+  }
+
+  #menuAside ul {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menuAside ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+  }
+}
+
+/********** dados **********/
+.alignTextAndImage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alignTextAndImageLeft {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alignTextAndImage img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1000px) {
+  .alignTextAndImage {
+    flex-direction: column;
+  }
+
+  .alignTextAndImageLeft {
+    flex-direction: column;
+  }
+
+  .alignTextAndImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .divText {
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+
+    margin-bottom: 20px;
+  }
+
+  .card {
+    height: 600px !important;
+  }
+}
+
+.titleHR {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .insta {
+    margin-top: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .alignTextAndImage {
+    flex-direction: column;
+  }
+
+  .alignTextAndImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .divText {
+    padding-right: 0% !important;
+    margin-bottom: 20px;
+  }
+
+  .infoText {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  .infoTextContainer {
+    text-align: -webkit-center !important;
+  }
+
+  strong {
+    font-size: 20px !important;
+  }
+
+  .imageInfo {
+    width: 80% !important;
+  }
+
+  .card {
+    height: auto !important;
+  }
+
+  .pageTitle {
+    margin-top: 100px !important;
+    margin-bottom: 2%;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .titleHR {
+    display: block;
+    background-color: #f1f1f13a;
+    height: 3px;
+  }
+
+  .insta {
+    height: 80px;
+    width: 80% !important;
+  }
+}
+
+.pageTitle {
+  margin-top: 50px;
+  margin-bottom: 2%;
+  font-size: 4rem;
+  text-align: center;
+
+  font-weight: bold;
+}
+
+.insta {
+  height: 80px;
+  width: 500px;
+}
+
+#myImg {
+  width: 550%;
+  height: auto;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 50px;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 1.2s ease-in-out;
+  -moz-animation: fadeIn 1.2s ease-in-out;
+  -o-animation: fadeIn 1.2s ease-in-out;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .hero {
+    height: 1200px;
+  }
+
+  #myImg {
+    display: none !important;
+  }
+}
+
+#faixaBranca {
+  width: 100%;
+
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.54) 0%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8a000000', endColorstr='#00000000', GradientType=0);
+
+
+
+  margin: 0px;
+  padding: 0px;
+  padding-top: 20px !important;
+  padding-left: 10px !important;
+  padding-right: 8px !important;
+}
+
+/* ---- home ---- */
+
+@media screen and (max-width: 1100px) {
+  #faixaBranca img {
+    width: 250px;
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pageTitle {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pageTitle {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  #faixaBranca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #faixaBranca img {
+    width: 200px;
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  #myImg {
+    width: 300px;
+  }
+}
